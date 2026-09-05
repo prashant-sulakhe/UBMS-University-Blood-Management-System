@@ -1,16 +1,136 @@
-# React + Vite
+# 🩸 University Blood Management System (UBMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application designed to simplify blood donor management, blood requests, and communication between donors, users, and administrators.
 
-Currently, two official plugins are available:
+UBMS provides a centralized platform where users can register, manage donor information, search for suitable donors, submit blood requests, and receive notifications. The system also provides administrative functionality for managing users, donors, blood requests, and donation-related information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+**Live Website:**  
+https://ubms-university-blood-management-system.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💻 Source Code
 
-## Expanding the ESLint configuration
+**GitHub Repository:**  
+https://github.com/prashant-sulakhe/UBMS-University-Blood-Management-System
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 Project Overview
+
+Finding suitable blood donors quickly can be challenging when information is scattered across different sources.
+
+The **University Blood Management System (UBMS)** provides a centralized digital platform to manage blood donor information and blood requests.
+
+The system connects users and donors while providing administrators with tools to manage the platform efficiently.
+
+---
+
+## ✨ Key Features
+
+### 👤 User Management
+- User registration and login
+- Secure authentication
+- User profile management
+- JWT-based authentication
+- Password hashing using bcrypt
+
+### 🩸 Blood Donor Management
+- Donor registration
+- Donor profile management
+- Search for donors based on blood requirements
+- Donor availability management
+- Donation tracking
+
+### 📋 Blood Request Management
+- Create blood requests
+- Manage submitted requests
+- Track blood request status
+- Direct blood requests
+- Request management for administrators
+
+### 🔔 Notifications
+- Application notifications
+- Real-time notification updates
+- Socket.IO-based communication
+
+### 👨‍💼 Admin Management
+- Administrative dashboard
+- Manage donors
+- Manage blood requests
+- View user/donor information
+- Monitor donation-related information
+
+### 📧 Email Services
+- Email-based communication
+- OTP/email functionality
+- Nodemailer integration
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MySQL
+- TiDB Cloud
+
+### Authentication & Security
+- JSON Web Tokens (JWT)
+- bcrypt
+
+### Real-Time Communication
+- Socket.IO
+
+### Email
+- Nodemailer
+
+### Deployment
+- Render
+
+### Version Control
+- Git
+- GitHub
+
+---
+
+## 🏗️ System Architecture
+
+The application follows a full-stack architecture:
+
+```text
+                ┌──────────────────────┐
+                │      User / Admin    │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   React.js Frontend  │
+                │       + Vite         │
+                └──────────┬───────────┘
+                           │
+                    HTTP / WebSocket
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │ Node.js + Express.js │
+                │       Backend        │
+                └───────┬───────┬──────┘
+                        │       │
+              ┌─────────┘       └──────────┐
+              ▼                            ▼
+      ┌───────────────┐            ┌───────────────┐
+      │ TiDB Cloud /  │            │   Socket.IO   │
+      │ MySQL Database│            │  Real-Time    │
+      └───────────────┘            │ Communication │
+                                   └───────────────┘
