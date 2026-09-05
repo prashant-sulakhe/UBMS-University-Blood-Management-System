@@ -8,11 +8,6 @@ A full-stack web application designed to simplify blood donor management, blood 
 **Live Website:**  
 https://ubms-university-blood-management-system.onrender.com
 
-## 💻 Source Code
-
-**GitHub Repository:**  
-https://github.com/prashant-sulakhe/UBMS-University-Blood-Management-System
-
 ---
 
 ## 📌 Project Overview
@@ -365,16 +360,6 @@ BCA Graduate
 - Nodemailer
 - Git & GitHub
 - Render
-
----
-
-## 🔗 Project Links
-
-🌐 **Live Demo:**  
-https://ubms-university-blood-management-system.onrender.com
-
-💻 **GitHub Repository:**  
-https://github.com/prashant-sulakhe/UBMS-University-Blood-Management-System
 
 ---
 
