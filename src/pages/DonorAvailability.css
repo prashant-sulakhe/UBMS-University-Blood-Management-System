@@ -1,0 +1,244 @@
+.donor-page {
+  animation: fadeInUp 0.4s ease-out;
+  padding: 2rem 0 4rem 0;
+  min-height: calc(100vh - 120px);
+}
+
+.donor-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+.header-icon-wrap {
+  display: inline-flex;
+  background: rgba(var(--primary-rgb), 0.1);
+  padding: 1.2rem;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.connection-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
+.connection-status.active {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+/* ── Grid ────────────────────────────────────────────── */
+.donor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .donor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-header h2 {
+  font-size: 1.35rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* ── Status Section ──────────────────────────────────── */
+.status-section {
+  padding: 2.5rem;
+  height: fit-content;
+}
+
+.status-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.status-toggle-btn.active {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.eligibility-badge {
+  padding: 0.8rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eligibility-badge.eligible {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.eligibility-badge.ineligible {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.eligibility-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: rgba(var(--primary-rgb), 0.05);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.status-item .label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-item .value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.status-item .blood-group {
+  font-size: 1.6rem;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.empty-status {
+  padding: 3rem 0;
+}
+
+.empty-status p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.empty-status .small {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+/* ── Form Section ────────────────────────────────────── */
+.form-section {
+  padding: 2.5rem;
+}
+
+.donor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.form-group input, 
+.form-group select {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.form-info {
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

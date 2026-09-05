@@ -1,0 +1,47 @@
+﻿mysqld.exe : 
+2026-04-07T14:56:58.373205Z 0 
+[System] [MY-015017] [Server] 
+MySQL Server Initialization - 
+start.
+At line:1 char:1
++ & "C:\Program 
+Files\MySQL\MySQL Server 
+8.4\bin\mysqld.exe" 
+--initiali ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo          : 
+    NotSpecified: (2026-04-0  
+  7T14:5...zation - start.:   
+ String) [], RemoteExcepti    
+on
+    + FullyQualifiedErrorId : 
+    NativeCommandError
+ 
+2026-04-07T14:56:58.384641Z 0 
+[System] [MY-013169] [Server] 
+C:\Program Files\MySQL\MySQL 
+Server 8.4\bin\mysqld.exe 
+(mysqld 8.4.8) initializing 
+of server in progress as 
+process 17768
+2026-04-07T14:56:58.422360Z 1 
+[System] [MY-013576] [InnoDB] 
+InnoDB initialization has 
+started.
+2026-04-07T14:56:58.734485Z 1 
+[System] [MY-013577] [InnoDB] 
+InnoDB initialization has 
+ended.
+2026-04-07T14:57:02.593071Z 6 
+[Warning] [MY-010453] 
+[Server] root@localhost is 
+created with an empty 
+password ! Please consider 
+switching off the 
+--initialize-insecure option.
+2026-04-07T14:57:05.376367Z 0 
+[System] [MY-015018] [Server] 
+MySQL Server Initialization - 
+end.

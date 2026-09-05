@@ -1,0 +1,278 @@
+/* ═══════════════════════════════════════════════════════
+   Search Donor — Glass design system
+   ═══════════════════════════════════════════════════════ */
+.search-page {
+  animation: fadeInUp 0.4s ease-out;
+  padding: 2rem 0 4rem 0;
+}
+
+.search-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.search-filters-card {
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  border-left: 4px solid var(--primary);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: none;
+  border-right: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  left: 1rem;
+  pointer-events: none;
+  color: var(--text-muted);
+}
+
+.input-with-icon select,
+.input-with-icon input {
+  width: 100%;
+  padding: 0.9rem 1rem 0.9rem 2.8rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--input-border);
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--input-bg);
+  backdrop-filter: blur(8px);
+  color: var(--input-text);
+  transition: all var(--transition);
+}
+
+.input-with-icon select:focus,
+.input-with-icon input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--input-focus-bg);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.search-btn {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 2rem;
+  font-size: 1.05rem;
+  border-radius: 10px;
+}
+
+.results-count {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.donor-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.donor-card {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border);
+  background: var(--glass-bg);
+  height: 100%;
+}
+
+.donor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary);
+}
+
+.offline-dim {
+  opacity: 0.65;
+  filter: grayscale(0.4);
+}
+
+.donor-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.donor-avatar-med {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+.donor-info-top {
+  flex: 1;
+}
+
+.donor-info-top h4 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.donor-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.blood-group-badge-large {
+  background: rgba(var(--primary-rgb), 0.08);
+  color: var(--primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+}
+
+.donor-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: rgba(var(--primary-rgb), 0.02);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.donor-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.contact-btn-full {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.donor-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.donor-avatar-small {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.blood-group-badge {
+  display: inline-block;
+  background: rgba(var(--primary-rgb), 0.08);
+  backdrop-filter: blur(4px);
+  color: var(--primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+}
+
+.contact-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: max-content;
+  border-radius: 8px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.no-results-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(var(--primary-rgb), 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+[data-theme="dark"] .no-results-icon {
+  background: rgba(var(--primary-rgb), 0.08);
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.no-results p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .search-btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}

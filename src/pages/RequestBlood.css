@@ -1,0 +1,569 @@
+/* ═══════════════════════════════════════════════════════
+   Request Blood — Premium Glass Design System
+   ═══════════════════════════════════════════════════════ */
+.request-page {
+  animation: fadeInUp 0.4s ease-out;
+  padding: 2rem 0 4rem 0;
+  min-height: calc(100vh - 200px);
+}
+
+.flex-center-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.request-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Tab Navigation ──────────────────────────────────── */
+.rb-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 0.4rem;
+}
+
+.rb-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: none;
+}
+
+.rb-tab:hover {
+  background: rgba(var(--primary-rgb), 0.04);
+  color: var(--text-primary);
+  transform: none;
+}
+
+.rb-tab-active {
+  background: rgba(var(--primary-rgb), 0.1) !important;
+  color: var(--primary) !important;
+  box-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.12);
+}
+
+/* ── Form ────────────────────────────────────────────── */
+.form-wrapper {
+  padding: 3.5rem;
+  border-top: 5px solid var(--primary);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-left: 1px solid var(--glass-border);
+  border-right: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2rem 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-section-title:first-child {
+  margin-top: 0;
+}
+
+.form-section-title h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: var(--text-primary);
+}
+
+/* Input with icon */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  left: 1.2rem;
+  pointer-events: none;
+  color: var(--text-muted);
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 1rem 1.2rem 1rem 3.2rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--input-border);
+  font-size: 1.05rem;
+  font-family: inherit;
+  background: var(--input-bg);
+  backdrop-filter: blur(8px);
+  color: var(--input-text);
+  transition: all var(--transition);
+}
+
+.input-with-icon input:focus {
+  outline: none;
+  background: var(--input-focus-bg);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.full-width-select {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--input-border);
+  font-size: 1.05rem;
+  font-family: inherit;
+  background: var(--input-bg);
+  backdrop-filter: blur(8px);
+  color: var(--input-text);
+  transition: all var(--transition);
+  cursor: pointer;
+  appearance: auto;
+}
+
+.full-width-select:focus {
+  outline: none;
+  background: var(--input-focus-bg);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.form-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: rgba(var(--primary-rgb), 0.02);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+[data-theme="dark"] .form-disclaimer {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.form-disclaimer input {
+  margin-top: 0.3rem;
+  transform: scale(1.3);
+  width: auto;
+}
+
+.form-disclaimer label {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.15rem;
+  border-radius: 10px;
+}
+
+/* ── Success Card ────────────────────────────────────── */
+.success-card {
+  max-width: 700px;
+  padding: 4rem 3rem;
+  border-top: 5px solid var(--success);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-left: 1px solid var(--glass-border);
+  border-right: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.success-icon-wrapper {
+  width: 110px;
+  height: 110px;
+  background: rgba(16, 185, 129, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem auto;
+  animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-theme="dark"] .success-icon-wrapper {
+  background: rgba(16, 185, 129, 0.12);
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* ── Request Cards (History List) ────────────────────── */
+.rb-request-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rb-request-card {
+  padding: 1.5rem !important;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-left: 4px solid transparent;
+}
+
+.rb-request-card:hover {
+  border-left-color: var(--primary);
+  transform: translateX(4px) translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.rb-request-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.rb-request-id {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rb-request-blood-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.rb-status-badge {
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.rb-status-badge-lg {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.rb-request-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.rb-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  background: rgba(var(--primary-rgb), 0.06);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.rb-view-btn:hover {
+  background: rgba(var(--primary-rgb), 0.12);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(var(--primary-rgb), 0.12);
+}
+
+/* ── Back Button ─────────────────────────────────────── */
+.rb-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.rb-back-btn:hover {
+  background: rgba(var(--primary-rgb), 0.06);
+  border-color: rgba(var(--primary-rgb), 0.2);
+  transform: translateX(-3px);
+  box-shadow: none;
+}
+
+/* ── Detail View ─────────────────────────────────────── */
+.rb-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rb-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+}
+
+.rb-detail-item {
+  background: rgba(var(--primary-rgb), 0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem;
+}
+
+.rb-detail-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.rb-detail-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rb-blood-lg {
+  font-size: 1.6rem;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+/* ── Matched Donors Grid ─────────────────────────────── */
+.rb-donors-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rb-donor-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  background: rgba(var(--primary-rgb), 0.02);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.rb-donor-card:hover {
+  background: rgba(var(--primary-rgb), 0.05);
+  border-color: rgba(var(--primary-rgb), 0.15);
+  transform: translateX(4px);
+}
+
+.rb-donor-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.15), rgba(var(--primary-rgb), 0.05));
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.rb-donor-info {
+  flex: 1;
+}
+
+.rb-donor-blood {
+  background: var(--primary);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Urgency Selector ────────────────────────────────── */
+.urgency-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+.urgency-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.75rem 0.8rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.urgency-btn:hover { border-color: var(--text-muted); }
+.urgency-btn.urgency-active.urgency-normal {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: #22c55e;
+  color: #16a34a;
+}
+.urgency-btn.urgency-active.urgency-urgent {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: #f59e0b;
+  color: #d97706;
+}
+.urgency-btn.urgency-active.urgency-critical {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+  color: #dc2626;
+  animation: criticalPulse 1.5s infinite;
+}
+@keyframes criticalPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--input-border);
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--input-bg);
+  color: var(--input-text);
+  transition: all var(--transition);
+  box-sizing: border-box;
+}
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--input-border);
+  font-size: 1.05rem;
+  font-family: inherit;
+  background: var(--input-bg);
+  color: var(--input-text);
+  transition: all var(--transition);
+  box-sizing: border-box;
+}
+.form-group input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+.form-group input[type="tel"] {
+  width: 100%;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 2.5rem 1.5rem;
+  }
+  .rb-tabs {
+    flex-direction: column;
+  }
+  .rb-request-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rb-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .action-buttons {
+    flex-direction: column;
+  }
+  .action-buttons button, .action-buttons a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .rb-detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .rb-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
