@@ -9,11 +9,6 @@ UBMS provides a centralized platform where users can register, manage donor info
 **Live Website:**  
 https://ubms-university-blood-management-system.onrender.com
 
-## 💻 Source Code
-
-**GitHub Repository:**  
-https://github.com/prashant-sulakhe/UBMS-University-Blood-Management-System
-
 ---
 
 ## 📌 Project Overview
