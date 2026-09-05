@@ -103,18 +103,34 @@ The system allows users to register, manage donor information, search for suitab
 
 ## 🏗️ System Architecture
 
+The application follows a full-stack architecture:
+
 ```text
-User / Admin
-     ↓
-React.js + Vite Frontend
-     ↓
-HTTP / WebSocket
-     ↓
-Node.js + Express.js Backend
-     ↓
-TiDB Cloud / MySQL Database
-     ↕
-Socket.IO Real-Time Communication
+                ┌──────────────────────┐
+                │      User / Admin    │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   React.js Frontend  │
+                │       + Vite         │
+                └──────────┬───────────┘
+                           │
+                    HTTP / WebSocket
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │ Node.js + Express.js │
+                │       Backend        │
+                └───────┬───────┬──────┘
+                        │       │
+              ┌─────────┘       └──────────┐
+              ▼                            ▼
+      ┌───────────────┐            ┌───────────────┐
+      │ TiDB Cloud /  │            │   Socket.IO   │
+      │ MySQL Database│            │  Real-Time    │
+      └───────────────┘            │ Communication │
+                                   └───────────────┘
 ```
 
 ---
