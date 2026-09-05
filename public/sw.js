@@ -4,7 +4,7 @@ self.addEventListener('push', (event) => {
   const data = event.data.json();
   const options = {
     body: data.message,
-    icon: '/logo192.png', // Update with actual logo if available
+    icon: '/ubms-logo.png',
     badge: '/favicon.ico',
     data: {
       type: data.type,
