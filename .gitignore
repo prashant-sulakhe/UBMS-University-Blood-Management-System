@@ -27,7 +27,11 @@ dist-ssr
 .env
 .env.*
 
+# Database files
+.mysql/
+
 # Temporary test/scratch files
 scratch/
 test_donors.js
+
 
